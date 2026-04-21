@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Dina Nur Aini</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <nav class="hero-nav">
+            <a href="#profil">Profil</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#keahlian">Keahlian</a>
+            <a href="#galeri">Galeri</a>
+            <a href="#kontak">Social Media</a>
+        </nav>
+
+        <div class="hero-content">
+            <div class="hero-card">
+                <div class="hero-photo">
+                    <img src="profil.jpg" alt="Foto Profil Dina">
+                    <div class="overlay"></div>
+                </div>
+                <div class="hero-copy">
+                    <span>Halo, Saya Dina</span>
+                    <h1>Dina Nur Aini</h1>
+                    <p>Jurusan Akuntansi Keuangan, fokus pada jurnal keuangan dan pengelolaan Excel ringan. Senang mempelajari hal-hal baru.</p>
+                    <div class="hero-buttons">
+                        <a href="#profil" class="btn btn-primary">Lihat Profil</a>
+                        <a href="#kontak" class="btn btn-secondary">Hubungi Saya</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="profil" class="section reveal">
+            <h2>Profil</h2>
+            <div class="profile-box">
+                <div>
+                    <p><strong>Nama</strong><br>Dina Nur Aini</p>
+                    <p><strong>Jurusan</strong><br>Akuntansi Keuangan</p>
+                    <p><strong>TTL</strong><br>Purbalingga, 21 Januari 2008</p>
+                    <p><strong>Pendidikan</strong><br>SD: MI MA Arif NU Rabak</p>
+                </div>
+                <div>
+                    <p><strong>SMP</strong><br>SMPN 2 Kalimanah</p>
+                    <p><strong>SMK</strong><br>SMKN 1 Purbalingga</p>
+                    <p><strong>Status</strong><br>Mahasiswa Akuntansi</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tentang" class="section reveal">
+            <h2>Tentang Saya</h2>
+            <p class="about-text">
+                Saya mahasiswa jurusan Akuntansi Keuangan dengan fokus pada jurnal keuangan dan pengelolaan Excel ringan. Hard skill saya meliputi pembukuan keuangan sederhana, Excel umum, dan desain. Soft skill saya adalah komunikasi, cekatan, dan senang mempelajari hal-hal baru.
+            </p>
+            <p class="about-text" style="margin-top: 1rem;">
+                Pengalaman: PKL di Dinas Pendidikan dan Kebudayaan (belajar tentang arsip, dokumen, keuangan), membantu usaha keluarga dalam pengelolaan keuangan sederhana, mengatur dan merancang bisnis secara mandiri. Organisasi: Sie Kurikulum English Club aktif. Hobby: Mencoba segala resep masakan, baking, berkebun, traveling.
+            </p>
+        </section>
+
+        <section id="keahlian" class="section reveal">
+            <h2>Keahlian</h2>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3>Pembukuan Keuangan</h3>
+                    <p>Mengelola pembukuan keuangan sederhana dan jurnal keuangan.</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Excel Umum</h3>
+                    <p>Pengelolaan data dan analisis ringan menggunakan Microsoft Excel.</p>
+                </article>
+                <article class="skill-card">
+                    <h3>Desain</h3>
+                    <p>Membuat desain visual yang estetis dan fungsional.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="galeri" class="section reveal">
+            <h2>Galeri</h2>
+            <div class="gallery">
+                <div class="gallery-item" onclick="openModal('gambar1.jpg')">
+                    <img src="gambar1.jpg" alt="Karya 1">
+                    <p class="gallery-caption">Ini kue buatan saya</p>
+                </div>
+                <div class="gallery-item" onclick="openModal('gambar2.jpg')">
+                    <img src="gambar2.jpg" alt="Karya 2">                    <p class="gallery-caption">Ini kue buatan saya</p>                </div>
+                <div class="gallery-item" onclick="openModal('gambar3.jpg')">
+                    <img src="gambar3.jpg" alt="Karya 3">
+                </div>
+                <div class="gallery-item" onclick="openModal('gambar4.jpg')">
+                    <img src="gambar4.jpg" alt="Karya 4">
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="section reveal">
+            <h2>Social Media</h2>
+            <div class="contact-card">
+                <p>Tiktok: <a href="https://tiktok.com/pausspiink" target="_blank">@pausspiink</a></p>
+                <p>Instagram: <a href="https://instagram.com/dheynaps" target="_blank">@dheynaps</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Dina Nur Aini</p>
+    </footer>
+
+    <div id="imageModal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="close-modal" onclick="closeModal(event)">×</button>
+            <img id="modalImage" src="" alt="Galeri">
+        </div>
+    </div>
+
+    <script>
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = imageSrc;
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(event) {
+            if (event && event.target && event.target.classList.contains('close-modal')) {
+                event.stopPropagation();
+            }
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('open');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        reveals.forEach(el => observer.observe(el));
+
+        // Hover effect for all text elements to change color to a blue-compatible color and reset on mouseout
+        document.addEventListener('mouseover', (e) => {
+            const textTags = ['P', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'SPAN', 'A', 'LI', 'DIV'];
+            if (textTags.includes(e.target.tagName) && e.target.textContent.trim()) {
+                if (!e.target.dataset.originalColor) {
+                    e.target.dataset.originalColor = getComputedStyle(e.target).color;
+                }
+                e.target.style.color = '#0000ff'; // Navy blue
+            }
+        });
+
+        document.addEventListener('mouseout', (e) => {
+            const textTags = ['P', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'SPAN', 'A', 'LI', 'DIV'];
+            if (textTags.includes(e.target.tagName) && e.target.dataset.originalColor) {
+                e.target.style.color = e.target.dataset.originalColor;
+            }
+        });
+    </script>
+</body>
+</html>
