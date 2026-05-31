@@ -24,6 +24,16 @@
             color: #ffffff !important;
             transform: scale(1.05);
         }
+        /* CSS untuk teks petunjuk klik foto */
+.click-hint {
+    display: block;
+    font-size: 0.75rem; /* Ukuran teks kecil */
+    color: #333333; /* Warna gelap */
+    opacity: 0.5; /* Membuat teks samar-samar (transparan 50%) */
+    font-style: italic; /* Dimiringkan sedikit agar estetik */
+    margin-top: 4px;
+}
+
     </style>
 </head>
 <body>
@@ -213,32 +223,36 @@
             </div>
         </section>
 
-        <section id="galeri" class="section reveal">
+<section id="galeri" class="section reveal">
     <h2 data-en="Gallery">Galeri</h2>
     <div class="gallery">
         <div class="gallery-item" onclick="openModal('gambar1.jpg')">
             <img src="gambar1.jpg" alt="Karya 1">
             <p class="gallery-caption" data-en="Internship Activities at the Department of Education and Culture">Kegiatan PKL di Dinas Pendidikan dan Kebudayaan</p>
+            <span class="click-hint" data-en="(Click photo to enlarge)">(Klik foto untuk melihat lebih jelas)</span>
         </div>
         <div class="gallery-item" onclick="openModal('gambar2.jpg')">
             <img src="gambar2.jpg" alt="Karya 2">
             <p class="gallery-caption" data-en="English Expression">English Expression</p>
+            <span class="click-hint" data-en="(Click photo to enlarge)">(Klik foto untuk melihat lebih jelas)</span>
         </div>
         <div class="gallery-item" onclick="openModal('gambar3.jpg')">
             <img src="gambar3.jpg" alt="Karya 3">
             <p class="gallery-caption" data-en="English Adventure">English Adventure</p>
+            <span class="click-hint" data-en="(Click photo to enlarge)">(Klik foto untuk melihat lebih jelas)</span>
         </div>
         <div class="gallery-item" onclick="openModal('gambar4.jpg')">
             <img src="gambar4.jpg" alt="Karya 4">
             <p class="gallery-caption" data-en="School Award">Penghargaan Oleh Sekolah</p>
+            <span class="click-hint" data-en="(Click photo to enlarge)">(Klik foto untuk melihat lebih jelas)</span>
         </div>
         <div class="gallery-item" onclick="openModal('gambar5.jpg')">
             <img src="gambar5.jpg" alt="Karya 5">
             <p class="gallery-caption" data-en="My Business Products">Produk Bisnis Saya</p>
+            <span class="click-hint" data-en="(Click photo to enlarge)">(Klik foto untuk melihat lebih jelas)</span>
         </div>
     </div>
 </section>
-
 
         <section id="kontak" class="section reveal">
             <footer class="mini-footer">
