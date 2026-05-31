@@ -567,3 +567,37 @@ footer p:nth-child(3) {
     padding: 0.65rem 1rem;
     font-size: 0.9rem;
 }
+.social-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.social-btn {
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.social-btn.email {
+    background: #1e3a8a;
+}
+
+.social-btn.ig {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+.social-btn.tiktok {
+    background: #111;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
