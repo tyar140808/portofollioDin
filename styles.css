@@ -370,10 +370,33 @@ h2::after {
 }
 
 footer {
-    padding: 1.5rem 0;
     text-align: center;
-    color: #83a7ff;
-    font-size: 0.95rem;
+    padding: 2.5rem 1.5rem;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #ffffff;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 6px 0;
+    line-height: 1.6;
+}
+
+footer p:first-child {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+footer p:nth-child(2) {
+    color: #cbd5e1;
+}
+
+footer p:nth-child(3) {
+    font-size: 0.9rem;
+    opacity: 0.75;
+    max-width: 700px;
+    margin: 10px auto 0;
+    font-style: italic;
 }
 
 .modal {
