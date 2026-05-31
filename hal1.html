@@ -35,7 +35,7 @@
             <a href="#galeri" data-en="Gallery">Galeri</a>
             <a href="#kontak" data-en="Social Media">Social Media</a>
             <!-- Tombol Translate -->
-            <button id="lang-btn" onclick="toggleLanguage()" class="btn-lang">🇬🇧 EN / 🇮🇩 ID</button>
+<button id="lang-btn" onclick="toggleLanguage()" class="btn-lang">🇮🇩 Indonesia</button>
         </nav>
 
         <div class="hero-content">
@@ -258,26 +258,35 @@
 
     <script>
         // FUNGSI TOGGLE BAHASA (BARU)
-        let isEnglish = false;
-        function toggleLanguage() {
-            isEnglish = !isEnglish;
-            
-            // Ambil semua elemen yang memiliki atribut data-en
-            const elements = document.querySelectorAll('[data-en]');
-            
-            elements.forEach(el => {
-                // Simpan bahasa aslinya (Indonesia) ke data-id jika belum ada
-                if (!el.hasAttribute('data-id')) {
-                    el.setAttribute('data-id', el.innerHTML);
-                }
-                
-                // Ubah teks sesuai dengan status bahasa saat ini
-                el.innerHTML = isEnglish ? el.getAttribute('data-en') : el.getAttribute('data-id');
-            });
-            
-            // Perbarui dokumen bahasa untuk SEO / Accessibility
-            document.documentElement.lang = isEnglish ? 'en' : 'id';
+        // FUNGSI TOGGLE BAHASA
+let isEnglish = false;
+function toggleLanguage() {
+    isEnglish = !isEnglish;
+    
+    // Ubah ikon dan teks pada tombol sesuai bahasa yang aktif
+    const langBtn = document.getElementById('lang-btn');
+    if (isEnglish) {
+        langBtn.innerHTML = '🇬🇧 English';
+    } else {
+        langBtn.innerHTML = '🇮🇩 Indonesia';
+    }
+    
+    // Ambil semua elemen yang memiliki atribut data-en
+    const elements = document.querySelectorAll('[data-en]');
+    
+    elements.forEach(el => {
+        // Simpan bahasa aslinya (Indonesia) ke data-id jika belum ada
+        if (!el.hasAttribute('data-id')) {
+            el.setAttribute('data-id', el.innerHTML);
         }
+        
+        // Ubah teks sesuai dengan status bahasa saat ini
+        el.innerHTML = isEnglish ? el.getAttribute('data-en') : el.getAttribute('data-id');
+    });
+    
+    // Perbarui dokumen bahasa untuk SEO / Accessibility
+    document.documentElement.lang = isEnglish ? 'en' : 'id';
+}
 
         // FUNGSI BAWAAN YANG SUDAH ADA
         function openModal(imageSrc) {
