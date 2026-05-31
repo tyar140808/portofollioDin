@@ -5,15 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Dina Nur Aini</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS tambahan untuk Tombol Bahasa */
+        .btn-lang {
+            background: #2c3e50;
+            color: #ffffff;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            margin-left: 15px;
+        }
+        .btn-lang:hover {
+            background: #0000ff;
+            color: #ffffff !important;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
     <header class="hero">
         <nav class="hero-nav">
-            <a href="#profil">Profil</a>
-            <a href="#tentang">Tentang</a>
-            <a href="#keahlian">Keahlian</a>
-            <a href="#galeri">Galeri</a>
-            <a href="#kontak">Social Media</a>
+            <a href="#profil" data-en="Profile">Profil</a>
+            <a href="#tentang" data-en="About">Tentang</a>
+            <a href="#keahlian" data-en="Skills">Keahlian</a>
+            <a href="#galeri" data-en="Gallery">Galeri</a>
+            <a href="#kontak" data-en="Social Media">Social Media</a>
+            <!-- Tombol Translate -->
+            <button id="lang-btn" onclick="toggleLanguage()" class="btn-lang">🇬🇧 EN / 🇮🇩 ID</button>
         </nav>
 
         <div class="hero-content">
@@ -23,12 +45,12 @@
                     <div class="overlay"></div>
                 </div>
                 <div class="hero-copy">
-                    <span>Halo, Saya Dina</span>
+                    <span data-en="Hello, I am Dina">Halo, Saya Dina</span>
                     <h1>Dina Nur Aini</h1>
-                    <p>Jurusan Akuntansi Keuangan, fokus pada jurnal keuangan dan pengelolaan Excel ringan. Senang mempelajari hal-hal baru.</p>
+                    <p data-en="Financial Accounting major, focusing on financial journals and light Excel management. Enjoy learning new things.">Jurusan Akuntansi Keuangan, fokus pada jurnal keuangan dan pengelolaan Excel ringan. Senang mempelajari hal-hal baru.</p>
                     <div class="hero-buttons">
-                        <a href="#profil" class="btn btn-primary">Lihat Profil</a>
-                        <a href="#kontak" class="btn btn-secondary">Hubungi Saya</a>
+                        <a href="#profil" class="btn btn-primary" data-en="View Profile">Lihat Profil</a>
+                        <a href="#kontak" class="btn btn-secondary" data-en="Contact Me">Hubungi Saya</a>
                     </div>
                 </div>
             </div>
@@ -37,55 +59,166 @@
 
     <main class="container">
         <section id="profil" class="section reveal">
-            <h2>Profil</h2>
+            <h2 data-en="Profile">Profil</h2>
             <div class="profile-box">
                 <div>
-                    <p><strong>Nama</strong><br>Dina Nur Aini</p>
-                    <p><strong>Jurusan</strong><br>Akuntansi Keuangan</p>
-                    <p><strong>TTL</strong><br>Purbalingga, 21 Januari 2008</p>
-                    <p><strong>Pendidikan</strong><br>SD: MI MA Arif NU Rabak</p>
+                    <p><strong data-en="Name">Nama</strong><br>Dina Nur Aini</p>
+                    <p><strong data-en="Major">Jurusan</strong><br><span data-en="Financial Accounting">Akuntansi Keuangan</span></p>
+                    <p><strong data-en="Place & Date of Birth">TTL</strong><br>Purbalingga, 21 Januari 2008</p>
+                    <p><strong data-en="Primary School">Pendidikan</strong><br>SD: MI MA Arif NU Rabak</p>
                 </div>
                 <div>
-                    <p><strong>SMP</strong><br>SMPN 2 Kalimanah</p>
-                    <p><strong>SMK</strong><br>SMKN 1 Purbalingga</p>
+                    <p><strong data-en="Junior High School">SMP</strong><br>SMPN 2 Kalimanah</p>
+                    <p><strong data-en="Vocational High School">SMK</strong><br>SMKN 1 Purbalingga</p>
                 </div>
             </div>
         </section>
 
         <section id="tentang" class="section reveal">
-            <h2>Tentang Saya</h2>
-            <p class="about-text">
-                Saya siswa jurusan Akuntansi Keuangan dengan fokus pada jurnal keuangan dan pengelolaan Excel ringan. Hard skill saya meliputi pembukuan keuangan sederhana, Excel umum, dan desain. Soft skill saya adalah komunikasi, cekatan, dan senang mempelajari hal-hal baru.
+            <h2 data-en="About Me">Tentang Saya</h2>
+
+            <p class="about-text" data-en="Vocational High School graduate in Accounting and Financial Institutions with a high passion for growing in administration, customer service, digital marketing, and business. Experienced in customer service, independent business management, and market-oriented digital content creation.">
+                Lulusan SMK Akuntansi dan Keuangan Lembaga yang memiliki semangat tinggi untuk berkembang di bidang administrasi, customer service, digital marketing, dan bisnis. Berpengalaman dalam pelayanan pelanggan, pengelolaan usaha mandiri, serta pembuatan konten digital yang berorientasi pada kebutuhan pasar.
             </p>
-            <p class="about-text" style="margin-top: 1rem;">
-                Pengalaman: PKL di Dinas Pendidikan dan Kebudayaan (belajar tentang arsip, dokumen, keuangan), membantu usaha keluarga dalam pengelolaan keuangan sederhana, mengatur dan merancang bisnis secara mandiri. Organisasi: Sie Kurikulum English Club aktif. Hobby: Mencoba segala resep masakan, baking, berkebun, traveling.
+
+            <p class="about-text" style="margin-top: 1rem;" data-en="Possess good communication skills, able to work individually or in a team, and accustomed to dynamic work environments. With a combination of administrative skills, digital creativity, and an understanding of customer needs, I am ready to make positive contributions and create value for the companies and businesses I support.">
+                Memiliki kemampuan komunikasi yang baik, mampu bekerja secara individu maupun tim, serta terbiasa menghadapi lingkungan kerja yang dinamis. Dengan kombinasi keterampilan administratif, kreativitas digital, dan pemahaman terhadap kebutuhan pelanggan, saya siap memberikan kontribusi positif dan menciptakan nilai bagi perusahaan maupun bisnis yang saya dukung.
             </p>
         </section>
 
         <section id="keahlian" class="section reveal">
-            <h2>Keahlian</h2>
+            <h2 data-en="Main Skills">Keahlian Utama</h2>
+
             <div class="skills-grid">
                 <article class="skill-card">
-                    <h3>Pembukuan Keuangan</h3>
-                    <p>Mengelola pembukuan keuangan sederhana dan jurnal keuangan.</p>
+                    <h3 data-en="📊 Administration and Data Processing">📊 Administrasi dan Pengolahan Data</h3>
                 </article>
+
                 <article class="skill-card">
-                    <h3>Excel Umum</h3>
-                    <p>Pengelolaan data dan analisis ringan menggunakan Microsoft Excel.</p>
+                    <h3>💻 Microsoft Office</h3>
+                    <p>Excel, Word, PowerPoint</p>
                 </article>
+
                 <article class="skill-card">
-                    <h3>Desain</h3>
-                    <p>Membuat desain visual yang estetis dan fungsional.</p>
+                    <h3 data-en="🤝 Customer Service">🤝 Pelayanan Pelanggan (Customer Service)</h3>
+                </article>
+
+                <article class="skill-card">
+                    <h3 data-en="💰 Cashier and Transaction Management">💰 Kasir dan Pengelolaan Transaksi</h3>
+                </article>
+
+                <article class="skill-card">
+                    <h3 data-en="📱 Social Media Management">📱 Pengelolaan Media Sosial</h3>
+                </article>
+
+                <article class="skill-card">
+                    <h3 data-en="🎨 Creative Content Creation (Canva)">🎨 Pembuatan Konten Kreatif (Canva)</h3>
+                </article>
+
+                <article class="skill-card">
+                    <h3 data-en="🎥 Live Selling and Product Presentation">🎥 Live Selling dan Product Presentation</h3>
+                </article>
+
+                <article class="skill-card">
+                    <h3 data-en="🎤 Communication and Public Speaking">🎤 Komunikasi dan Public Speaking</h3>
+                </article>
+
+                <article class="skill-card">
+                    <h3 data-en="📈 Business Operational Management">📈 Manajemen Operasional Bisnis</h3>
+                </article>
+
+                <article class="skill-card">
+                    <h3 data-en="👥 Teamwork and Leadership">👥 Kerja Sama Tim dan Kepemimpinan</h3>
+                </article>
+            </div>
+        </section>
+
+        <section class="section reveal">
+            <h2 data-en="Work Experience">Pengalaman Kerja</h2>
+
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3 data-en="💰 Service and Cashier">💰 Pelayanan dan Kasir</h3>
+                    <p><strong data-en="Achievements:">Pencapaian:</strong></p>
+                    <ul>
+                        <li data-en="Capable of handling transactions quickly and accurately.">Mampu menangani transaksi dengan cepat dan akurat.</li>
+                        <li data-en="Maintaining customer satisfaction through friendly and responsive service.">Menjaga kepuasan pelanggan melalui pelayanan yang ramah dan responsif.</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <h3 data-en="🏪 Personal Business Owner">🏪 Bisnis Owner Pribadi</h3>
+                    <p><strong data-en="Achievements:">Pencapaian:</strong></p>
+                    <ul>
+                        <li data-en="Understanding business flow from upstream to downstream.">Memahami alur bisnis dari hulu ke hilir.</li>
+                        <li data-en="Capable of making operational decisions independently.">Mampu mengambil keputusan operasional secara mandiri.</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <h3 data-en="📱 Social Media Management">📱 Pengelolaan Media Sosial</h3>
+                    <p><strong data-en="Achievements:">Pencapaian:</strong></p>
+                    <ul>
+                        <li data-en="Increasing engagement through informative and attractive content.">Meningkatkan engagement melalui konten yang informatif dan menarik.</li>
+                        <li data-en="Building good communication with audiences and customers.">Membangun komunikasi yang baik dengan audiens ataupun pelanggan.</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <h3 data-en="🎨 Creative Content and Design">🎨 Konten Kreatif dan Desain</h3>
+                    <p><strong data-en="Achievements:">Pencapaian:</strong></p>
+                    <ul>
+                        <li data-en="Producing attractive and easy-to-understand promotional designs.">Menghasilkan desain promosi yang menarik dan mudah dipahami.</li>
+                        <li data-en="Supporting digital marketing creativity effectively.">Mendukung kreativitas pemasaran digital secara efektif.</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <h3>🎥 Live Selling</h3>
+                    <p><strong data-en="Achievements:">Pencapaian:</strong></p>
+                    <ul>
+                        <li data-en="Increasing customer buying interest through attractive product presentations.">Meningkatkan minat beli pelanggan melalui presentasi produk yang menarik.</li>
+                        <li data-en="Creating active interactions during live sessions.">Menciptakan interaksi aktif selama sesi live berlangsung.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+        
+        <section id="pengalaman" class="section reveal">
+            <h2 data-en="Experience & Professional Values">Pengalaman & Nilai Profesional</h2>
+
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3 data-en="🏢 Organizational Experience">🏢 Pengalaman Organisasi</h3>
+                    <h4 data-en="Active Committee of English Club">Committee Aktif English Club</h4>
+                    <ul>
+                        <li data-en="Participated in planning and executing various organizational programs.">Berpartisipasi dalam perencanaan dan pelaksanaan berbagai program organisasi.</li>
+                        <li data-en="Collaborated with team members in educational and competitive activities.">Berkolaborasi dengan anggota tim dalam kegiatan edukatif dan kompetitif.</li>
+                        <li data-en="Supported the development of members' English skills.">Mendukung pengembangan kemampuan bahasa Inggris anggota.</li>
+                        <li data-en="Trained communication, teamwork, and leadership skills.">Melatih kemampuan komunikasi, kerja sama tim, dan kepemimpinan.</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card">
+                    <h3 data-en="⭐ Professional Values">⭐ Nilai Profesional</h3>
+                    <ul>
+                        <li data-en="Disciplined and responsible.">Disiplin dan bertanggung jawab.</li>
+                        <li data-en="Fast learner and easily adaptable.">Cepat belajar dan mudah beradaptasi.</li>
+                        <li data-en="Service and customer satisfaction oriented.">Berorientasi pada pelayanan dan kepuasan pelanggan.</li>
+                        <li data-en="Able to work under pressure.">Mampu bekerja di bawah tekanan.</li>
+                        <li data-en="Possess initiative and enthusiasm to keep growing.">Memiliki inisiatif dan semangat untuk terus berkembang.</li>
+                        <li data-en="Committed to delivering maximum work results.">Berkomitmen memberikan hasil kerja yang maksimal.</li>
+                    </ul>
                 </article>
             </div>
         </section>
 
         <section id="galeri" class="section reveal">
-            <h2>Galeri</h2>
+            <h2 data-en="Gallery">Galeri</h2>
             <div class="gallery">
                 <div class="gallery-item" onclick="openModal('gambar1.jpg')">
                     <img src="gambar1.jpg" alt="Karya 1">
-                    <p class="gallery-caption">Ini kue buatan saya</p>
+                    <p class="gallery-caption" data-en="This is a cake I made">Ini kue buatan saya</p>
                 </div>
                 <div class="gallery-item" onclick="openModal('gambar2.jpg')">
                     <img src="gambar2.jpg" alt="Karya 2">
@@ -100,17 +233,21 @@
         </section>
 
         <section id="kontak" class="section reveal">
-            <h2>Social Media</h2>
-            <div class="contact-card">
-                <p>Tiktok: <a href="https://www.tiktok.com/@pausspiink" target="_blank">@pausspiink</a></p>
-                <p>Instagram: <a href="https://instagram.com/dheynaps" target="_blank">@dheynaps</a></p>
+            <footer class="mini-footer">
+                <p>&copy; 2026 Dina Nur Aini</p>
+                <p data-en="Financial Accounting | Administration | Digital Skills">Akuntansi Keuangan | Administrasi | Digital Skills</p>
+                <p style="font-size: 0.9rem; opacity: 0.7;" data-en='"Combining administrative skills, customer service, digital creativity, and enthusiasm for learning to provide the best contribution at every opportunity." ✨'>
+                    "Menggabungkan kemampuan administrasi, pelayanan pelanggan, kreativitas digital, dan semangat belajar untuk memberikan kontribusi terbaik di setiap kesempatan." ✨
+                </p>
+            </footer>
+
+            <div class="social-buttons">
+                <a href="mailto:dinaaini57@gmail.com" class="social-btn email" target="_blank">Email</a>
+                <a href="https://instagram.com/dheynaps" class="social-btn ig" target="_blank">Instagram</a>
+                <a href="https://www.tiktok.com/@dheynaps" class="social-btn tiktok" target="_blank">TikTok</a>
             </div>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2026 Dina Nur Aini</p>
-    </footer>
 
     <div id="imageModal" class="modal" onclick="closeModal(event)">
         <div class="modal-content" onclick="event.stopPropagation()">
@@ -120,6 +257,29 @@
     </div>
 
     <script>
+        // FUNGSI TOGGLE BAHASA (BARU)
+        let isEnglish = false;
+        function toggleLanguage() {
+            isEnglish = !isEnglish;
+            
+            // Ambil semua elemen yang memiliki atribut data-en
+            const elements = document.querySelectorAll('[data-en]');
+            
+            elements.forEach(el => {
+                // Simpan bahasa aslinya (Indonesia) ke data-id jika belum ada
+                if (!el.hasAttribute('data-id')) {
+                    el.setAttribute('data-id', el.innerHTML);
+                }
+                
+                // Ubah teks sesuai dengan status bahasa saat ini
+                el.innerHTML = isEnglish ? el.getAttribute('data-en') : el.getAttribute('data-id');
+            });
+            
+            // Perbarui dokumen bahasa untuk SEO / Accessibility
+            document.documentElement.lang = isEnglish ? 'en' : 'id';
+        }
+
+        // FUNGSI BAWAAN YANG SUDAH ADA
         function openModal(imageSrc) {
             const modal = document.getElementById('imageModal');
             const modalImage = document.getElementById('modalImage');
@@ -158,9 +318,12 @@
 
         reveals.forEach(el => observer.observe(el));
 
-        // Hover effect for all text elements to change color to a blue-compatible color and reset on mouseout
+        // Hover effect 
         document.addEventListener('mouseover', (e) => {
             const textTags = ['P', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'SPAN', 'A', 'LI', 'DIV'];
+            // Jangan terapkan hover color ini ke tombol bahasa agar tidak bentrok
+            if (e.target.id === 'lang-btn') return; 
+
             if (textTags.includes(e.target.tagName) && e.target.textContent.trim()) {
                 if (!e.target.dataset.originalColor) {
                     e.target.dataset.originalColor = getComputedStyle(e.target).color;
@@ -171,6 +334,8 @@
 
         document.addEventListener('mouseout', (e) => {
             const textTags = ['P', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'SPAN', 'A', 'LI', 'DIV'];
+            if (e.target.id === 'lang-btn') return;
+
             if (textTags.includes(e.target.tagName) && e.target.dataset.originalColor) {
                 e.target.style.color = e.target.dataset.originalColor;
             }
